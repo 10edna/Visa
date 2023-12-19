@@ -1,0 +1,672 @@
+body {
+  overflow-x: hidden;
+}
+
+.top {
+  position: relative;
+  background-color: #233152;
+}
+
+.top-b {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+}
+
+.top-info {
+  position: relative;
+  color: #fff;
+  border-right: 1px solid #536184;
+  padding: 14px 13px 13px 5px;
+  display: flex;
+}
+
+.top-info a {
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+  color: white;
+  white-space: nowrap;
+}
+
+.top-info-1 {
+  position: relative;
+  padding: 1px 0 0 17px;
+}
+
+/* .top-info-1 form {
+  background: transparent;
+  color: #ffffff !important;
+} */
+.top-s {
+  width: 193px;
+  height: auto;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #ffffff !important;
+  font-weight: 400;
+}
+
+.t-1 {
+  position: relative;
+  background: #fff;
+  padding: 0;
+}
+
+.top-info-2 {
+  position: relative;
+  color: #fff;
+  border-left: 1px solid #536184;
+  padding: 16px 8px 13px 0px;
+  border-right: 1px solid #536184;
+  padding-left: 18px;
+}
+
+.top-info-2 img {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  top: -1px;
+  height: 30px;
+  width: 33px;
+
+  transition: all 0.4s ease;
+}
+
+.top-info-2 span {
+  margin-top: 10vh;
+  white-space: nowrap;
+  /* padding-inline 0; */
+}
+
+.top-info-s {
+  border-right: 1px solid #536184;
+  line-height: 55px;
+}
+
+.top-info-s a {
+  display: inline-block;
+  margin-right: 9px;
+}
+
+.top-info-s a img {
+  height: 28px;
+  width: 28px;
+  white-space: nowrap;
+}
+
+.help {
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+.fhead {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  z-index: 99;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInDown;
+}
+
+.th-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.press {
+  position: relative;
+  padding: 29px 0;
+}
+
+.press img {
+  height: 52px;
+  width: auto;
+}
+
+.Menu {
+  position: relative;
+  margin-left: auto;
+}
+
+.sb-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.items {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  margin: 0 27px 0 0;
+  padding: 39px 0 43px;
+}
+
+.items:hover::before {
+  bottom: 41px;
+  opacity: 1;
+  background-color: #e94d4e;
+}
+
+.items::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  transition: all 0.4s ease;
+}
+
+.items:hover::after {
+  top: 37px;
+  opacity: 1;
+  background-color: #e94d4e;
+}
+
+.items::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+
+  transition: all 0.4s ease;
+}
+
+.items a {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #233152;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+
+.items:hover > .sb-items {
+  pointer-events: inherit;
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.items .sb-items {
+  position: absolute;
+  top: 80%;
+  left: -30px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  min-width: 220px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+  background: #fff;
+  transition: all 0.4s ease;
+  z-index: 4;
+}
+
+.sb-items li {
+  display: block;
+  margin: 0;
+  padding: 11px 30px;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.sb-items li a {
+  color: #233152;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+
+.sub {
+  position: absolute;
+  gap: 0;
+  left: 100%;
+  top: -20%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  min-width: 220px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+  background: #fff;
+  transition: all 0.4s ease;
+  z-index: 4;
+}
+
+.sub li a {
+  display: block;
+  margin: 0;
+  padding: 11px 30px;
+  border-top: 1px solid #eee;
+  width: 100%;
+  font-size: 16px;
+  color: #233152;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+
+.mega {
+  position: absolute;
+  right: -100%;
+  width: 1050px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.09);
+  background: #fff;
+  transition: all 0.4s ease;
+  opacity: 0;
+  z-index: 9;
+  visibility: hidden;
+}
+
+.Menu ul li:hover > .mega {
+  pointer-events: inherit;
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.m-item {
+  position: relative;
+}
+
+.m-item img {
+  height: auto;
+  max-width: 100%;
+}
+
+.mh {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 30px 0 20px;
+}
+
+.ser-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.ser-menu a {
+  margin: 0 0 10px;
+  padding: 0 0 10px;
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  display: block;
+  border-bottom: 1px solid #e4e4e4;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #233152;
+  text-decoration: none;
+  outline: 0;
+  transition: all ease 0.4s;
+}
+
+.book {
+  margin-left: 30px;
+  text-transform: none;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 32px;
+  border-radius: 5px;
+  text-decoration: none;
+  outline: 0;
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  background: #e94d4e;
+  color: #ffffff;
+  z-index: 2;
+  transition: all ease 1.3s;
+}
+
+.book:hover::before {
+  height: 100%;
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25.25%;
+  background-color: #233152;
+  z-index: -1;
+  transition: 1.5s ease-in-out;
+}
+
+.book:hover::after {
+  height: 100%;
+}
+
+.book::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 25.25%;
+  background-color: #233152;
+  z-index: -1;
+  transition: 1.5s ease-in-out;
+}
+
+.book span {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+.book:hover span::before {
+  height: 100%;
+}
+
+.book span::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 25%;
+  width: 25.25%;
+  height: 0;
+  background: #233152;
+  z-index: -1;
+  transition: 1.5s ease-in-out;
+}
+
+.book:hover span::after {
+  height: 100%;
+}
+
+.book span::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 75%;
+  width: 25.25%;
+  height: 0;
+  background: #233152;
+  z-index: -1;
+  transition: 1.5s ease-in-out;
+}
+a {
+  text-decoration: none;
+}
+.banner {
+  background-image: linear-gradient(
+      rgba(35, 49, 82, 0.4),
+      rgba(35, 49, 82, 0.4)
+    ),
+    url(images/taking-2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+}
+.banner .container {
+  z-index: 2;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.head-one {
+  font-size: 55px;
+  line-height: 58px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 77px 0 64px;
+  font-weight: 600;
+}
+.b-1 {
+  display: inline-flex;
+  background-color: #f8f8fa;
+  border-radius: 5px 5px 0 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #233152;
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 27px 0px 29px;
+}
+.breadcrumb-item {
+  color: black;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.section-1 {
+  position: relative;
+  padding: 120px 0;
+}
+.contact {
+  position: relative;
+  padding: 29px 22px 0 0;
+  background: transparent;
+  border-radius: 0;
+}
+.head-one {
+  /* margin-bottom: 19px; */
+  color: #e94d4e;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0.9;
+  padding-bottom: 0;
+}
+.head-two {
+  font-size: 45px;
+  line-height: 54px;
+  margin-bottom: 50px;
+  color: #233152;
+  text-transform: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #536184;
+  width: 100%;
+  height: 55px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: transparent;
+  margin: 0 0 24px;
+  padding: 0 18px;
+}
+.area {
+  height: 145px;
+  line-height: 55px;
+  resize: none;
+
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: transparent;
+  margin: 0 0 24px;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #536184;
+  width: 100%;
+}
+.pb {
+  position: relative;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 500;
+  height: 58px;
+  line-height: 58px;
+  border-radius: 4px;
+  padding: 0 31px;
+  text-align: center;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  display: inline-block;
+  background-color: #e94d4e;
+  color: #ffffff;
+  z-index: 2;
+  transition: all ease 0.3s;
+}
+/* .pn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25.25%;
+  height: 0;
+  background: #233152;
+  z-index: -1;
+} */
+.pb:hover {
+  background-color: #233152;
+  color: white;
+}
+.pb span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 58px;
+  text-align: center;
+  color: #ffffff;
+}
+.box {
+  background-image: url(images/background-2.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 62px 115px 60px 58px;
+  border-radius: 4px;
+}
+.head-three {
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.star {
+  position: relative;
+  display: flex;
+  line-height: 45px;
+  letter-spacing: 14px;
+  margin-bottom: 30px;
+}
+.star img {
+  margin-right: 2vh;
+}
+.head-four {
+  font-size: 48px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-transform: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.head-five {
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 51px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.box-1 {
+  position: relative;
+  min-height: 65px;
+  margin: 0 0 28px;
+  padding: 0 0 29px 65px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.img-box {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+.head-six {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 1px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.para-one {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  white-space: nowrap;
+}
+.section-2 {
+  position: relative;
+  overflow: hidden;
+}
+.g-map {
+  position: relative;
+}
+.g-map iframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 524px;
+  line-height: 0.8;
+  border: none;
+}
+.g-map::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgba(0, 0, 0, 0.3);
+}
